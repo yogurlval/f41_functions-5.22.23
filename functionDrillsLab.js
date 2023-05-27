@@ -291,8 +291,16 @@ let loser = 'Glimmer'
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-//CODE HERE
-
+function theEliminator(contestants, loser){
+  for (let i = 0; i < contestants.length; i++){
+    if (contestants[i] === loser){
+      contestants.splice(i, 1)
+    }
+  }
+  return contestants
+}
+let newContestants = theEliminator(contestants, loser)
+console.log(newContestants)
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -301,7 +309,11 @@ let sampleString = "Hi, my name is Kylo."
   Invoke the function, passing in the sampleString (above).
 */
 
-//CODE HERE
+const newStringz = (str) =>{
+  console.log(str.toUpperCase())
+}
+newStringz(sampleString)
+
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -340,19 +352,19 @@ let nums = [0,1,2,3,4,7,5,6,8,9]
   Use the sample array to test this function.
 */
 
-let ascending = (arr) =>{
-  let currentIndex = arr[0]
-  for( let i = 1; i <nums.length; i++){
-    // console.log(current,arr[i])
-    if(currentIndex < arr[i]){
-      currentIndex = arr[i]
-    } else {
-      return false
-    }
-  }
-  return true
-}
-console.log(ascending(nums))
+// let ascending = (arr) =>{
+//   let currentIndex = arr[0]
+//   for( let i = 1; i <nums.length; i++){
+//     // console.log(current,arr[i])
+//     if(currentIndex < arr[i]){
+//       currentIndex = arr[i]
+//     } else {
+//       return false
+//     }
+//   }
+//   return true
+// }
+// console.log(ascending(nums))
 
 
 ////////////////// PROBLEM 22 ////////////////////
